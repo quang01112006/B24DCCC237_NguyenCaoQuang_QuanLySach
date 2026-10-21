@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:background="#FBF8F5">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,149 +14,168 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="← Thêm sách"
+            android:layout_marginBottom="16dp"
+            android:text="← Thêm sách mới"
+            android:textColor="#5D4037"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#00796B"
-            android:layout_marginBottom="16dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tên sách *"
-            android:textColor="#212121"
-            android:textStyle="bold"/>
+            android:textColor="#3E2723"
+            android:textStyle="bold" />
+
+        <!-- Đã khóa 1 dòng + chuyển Enter thành nút Tiếp tục (Next) -->
         <EditText
             android:id="@+id/etTitle"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:hint="Ví dụ: Đắc nhân tâm"
-            android:textColor="#212121"
-            android:textColorHint="#757575"
+            android:layout_marginBottom="12dp"
             android:background="@android:drawable/editbox_background"
+            android:hint="Ví dụ: Đắc nhân tâm"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
             android:padding="8dp"
-            android:layout_marginBottom="12dp"/>
+            android:singleLine="true"
+            android:textColor="#212121"
+            android:textColorHint="#757575" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tác giả *"
-            android:textColor="#212121"
-            android:textStyle="bold"/>
+            android:textColor="#3E2723"
+            android:textStyle="bold" />
+
+        <!-- Đã khóa 1 dòng + chuyển Enter thành nút Mũi tên (Next) -->
         <EditText
             android:id="@+id/etAuthor"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:hint="Ví dụ: Dale Carnegie"
-            android:textColor="#212121"
-            android:textColorHint="#757575"
+            android:layout_marginBottom="12dp"
             android:background="@android:drawable/editbox_background"
+            android:hint="Ví dụ: Dale Carnegie"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
             android:padding="8dp"
-            android:layout_marginBottom="12dp"/>
+            android:singleLine="true"
+            android:textColor="#212121"
+            android:textColorHint="#757575" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Thể loại"
-            android:textColor="#212121"
-            android:textStyle="bold"/>
+            android:textColor="#3E2723"
+            android:textStyle="bold" />
+
         <Spinner
             android:id="@+id/spCategory"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="@android:drawable/btn_dropdown"
-            android:layout_marginBottom="12dp"/>
+            android:layout_marginBottom="12dp"
+            android:background="@android:drawable/btn_dropdown" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tình trạng đọc"
-            android:textColor="#212121"
-            android:textStyle="bold"/>
+            android:textColor="#3E2723"
+            android:textStyle="bold" />
+
         <RadioGroup
             android:id="@+id/rgStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="12dp">
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
+
             <RadioButton
                 android:id="@+id/rbUnread"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="Chưa đọc"
-                android:textColor="#212121"
-                android:checked="true"/>
+                android:textColor="#212121" />
+
             <RadioButton
                 android:id="@+id/rbReading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Đang đọc"
-                android:textColor="#212121"/>
+                android:textColor="#212121" />
+
             <RadioButton
                 android:id="@+id/rbRead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Đã đọc"
-                android:textColor="#212121"/>
+                android:textColor="#212121" />
         </RadioGroup>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Đánh giá"
-            android:textColor="#212121"
-            android:textStyle="bold"/>
+            android:textColor="#3E2723"
+            android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
             android:gravity="center_vertical"
-            android:layout_marginBottom="12dp">
+            android:orientation="horizontal">
 
-            <!-- Thêm progressTint vàng để nổi sao -->
             <RatingBar
                 android:id="@+id/rbRatingAdd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:numStars="5"
-                android:stepSize="1"
-                android:progressTint="#FFB300"
-                android:progressBackgroundTint="#CCCCCC"/>
+                android:progressBackgroundTint="#8D6E63"
+                android:progressTint="#D97706"
+                android:stepSize="1" />
 
             <TextView
                 android:id="@+id/tvRatingValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:text="0 / 5 sao"
-                android:textColor="#212121"
-                android:layout_marginStart="8dp"/>
+                android:textColor="#212121" />
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ghi chú"
-            android:textColor="#212121"
-            android:textStyle="bold"/>
+            android:textColor="#3E2723"
+            android:textStyle="bold" />
+
         <EditText
             android:id="@+id/etNote"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:hint="Nhập ghi chú (nhiều dòng)..."
-            android:textColor="#212121"
-            android:textColorHint="#757575"
-            android:inputType="textMultiLine"
-            android:gravity="top"
+            android:layout_marginBottom="16dp"
             android:background="@android:drawable/editbox_background"
+            android:gravity="top"
+            android:hint="Nhập ghi chú (nhiều dòng)..."
+            android:inputType="textMultiLine"
             android:padding="8dp"
-            android:layout_marginBottom="16dp"/>
+            android:textColor="#212121"
+            android:textColorHint="#757575" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="52dp"
+            android:backgroundTint="#5D4037"
             android:text="Lưu sách"
             android:textColor="#FFFFFF"
-            android:backgroundTint="#00796B"/>
+            app:cornerRadius="12dp" />
     </LinearLayout>
 </ScrollView>

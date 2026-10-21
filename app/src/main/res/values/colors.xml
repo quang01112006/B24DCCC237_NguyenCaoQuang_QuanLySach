@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <color name="book_primary">#5D4037</color>
+    <color name="book_primary_dark">#3E2723</color>
+    <color name="book_background">#FBF8F5</color>
+    <color name="book_card_bg">#FFFFFF</color>
+
+
+    <color name="chip_category_bg">#EFEBE9</color>
+    <color name="chip_category_text">#6D4C41</color>
+
+    <color name="chip_status_bg">#FEF3C7</color>
+    <color name="chip_status_text">#B45309</color>
 </resources>

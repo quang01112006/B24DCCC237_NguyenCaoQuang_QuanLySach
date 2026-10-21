@@ -1,116 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FBF8F5"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#F5F5F5">
+    android:padding="16dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="← Chi tiết sách"
+        android:textColor="#5D4037"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#00796B"
-        android:layout_marginBottom="16dp"/>
+        android:textStyle="bold" />
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@android:drawable/dialog_holo_light_frame"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp">
 
-        <TextView
-            android:id="@+id/tvDetailTitle"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#212121"/>
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:id="@+id/tvDetailAuthorCategory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#666666"
-            android:layout_marginTop="4dp"/>
+            <TextView
+                android:id="@+id/tvDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#3E2723"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvDetailStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#FFF3E0"
-            android:textColor="#E65100"
-            android:paddingHorizontal="8dp"
-            android:paddingVertical="4dp"
-            android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/tvDetailAuthorCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#795548" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#DDD"
-            android:layout_marginVertical="12dp"/>
+            <TextView
+                android:id="@+id/tvDetailStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_chip_status"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:textColor="#B45309"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Đánh giá"
-            android:textColor="#212121"
-            android:textStyle="bold"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="12dp"
+                android:background="#EFEBE9" />
 
-        <!-- Thêm progressTint vàng và progressBackgroundTint để sao hiện rõ nét -->
-        <RatingBar
-            android:id="@+id/rbDetailRating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:numStars="5"
-            android:stepSize="1"
-            android:progressTint="#FFB300"
-            android:progressBackgroundTint="#CCCCCC"
-            android:secondaryProgressTint="#FFB300"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đánh giá"
+                android:textColor="#3E2723"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ghi chú"
-            android:textColor="#212121"
-            android:textStyle="bold"
-            android:layout_marginTop="8dp"/>
+            <RatingBar
+                android:id="@+id/rbDetailRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:progressBackgroundTint="#CCCCCC"
+                android:progressTint="#D97706"
+                android:secondaryProgressTint="#D97706"
+                android:stepSize="1" />
 
-        <TextView
-            android:id="@+id/tvDetailNote"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#333333"
-            android:layout_marginTop="4dp"/>
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Ghi chú"
+                android:textColor="#3E2723"
+                android:textStyle="bold" />
 
-    <Button
+            <TextView
+                android:id="@+id/tvDetailNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#424242" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnMarkRead"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#5D4037"
         android:text="Đánh dấu đã đọc"
         android:textColor="#FFFFFF"
-        android:backgroundTint="#00796B"
-        android:layout_marginBottom="8dp"/>
+        app:cornerRadius="12dp" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnBack"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Quay lại"
-        android:textColor="#00796B"
         style="?attr/materialButtonOutlinedStyle"
-        android:layout_marginBottom="8dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginBottom="10dp"
+        android:text="Quay lại"
+        android:textColor="#5D4037"
+        app:cornerRadius="12dp"
+        app:strokeColor="#5D4037" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnDelete"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#D32F2F"
         android:text="Xóa sách"
         android:textColor="#FFFFFF"
-        android:backgroundTint="#D32F2F"/>
+        app:cornerRadius="12dp" />
 </LinearLayout>

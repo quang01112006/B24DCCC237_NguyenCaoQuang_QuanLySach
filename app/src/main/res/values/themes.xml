@@ -5,6 +5,13 @@
         <item name="android:textColor">#212121</item>
         <item name="android:editTextColor">#212121</item>
         <item name="android:textColorHint">#757575</item>
+
+    </style>
+    <style name="RatingBarYellow" parent="Theme.AppCompat">
+        <!-- Màu ngôi sao được đánh giá (Màu vàng cam) -->
+        <item name="colorControlActivated">#D97706</item>
+        <!-- Màu ngôi sao chưa đánh giá (Màu xám rõ nét) -->
+        <item name="colorControlNormal">#9E9E9E</item>
     </style>
 
     <style name="Theme.BaiThucHanh1" parent="Base.Theme.BaiThucHanh1" />
